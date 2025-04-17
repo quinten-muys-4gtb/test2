@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stalen Deuren en Ramen - Tilkens Construct</title>
+  <link rel="stylesheet" href="poorten.css" />
+  <script src="home.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>Tilkens Construct</h1>
+    </div>
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="magikal.html">Onze kachels</a></li>
+        <li><a href="poorten.html">Poorten</a></li>
+        <li><a href="overons.html">Over ons</a></li>
+        <li><a href="offerte.html">Offerte aanvragen</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="dakwerken">
+      <h2>Onze Dakdiensten</h2>
+      <p>Voor het vervangen van een volledig dak of een herstelling, kan u ons inschakelen.</p>
+      <p>Contacteer ons vandaag nog voor een offerte op maat.</p>
+      <p>Zowel hellende daken alsook het plaatsen van EPDM.</p>
+    </section>
+  </main>
+<!-- ... alles hierboven blijft hetzelfde -->
+
+</section>
+
+<!-- Fotogalerij -->
+<section class="gallery">
+  <h3>Voorbeelden van onze realisaties</h3>
+  <div class="gallery-container">
+    <img src="img/daken/WhatsApp Image 2025-04-13 at 21.18.08.jpeg" alt="Stalen deur voorbeeld 1">
+    <img src="img/daken/WhatsApp Image 2025-04-13 at 21.18.11.jpeg" alt="Stalen deur voorbeeld 2">
+    <img src="img/daken/WhatsApp Image 2025-04-13 at 21.18.12.jpeg" alt="Stalen deur voorbeeld 3">
+    <img src="img/daken/hellend dak.webp" alt="Stalen deur voorbeeld 4">
+    <img src="img/daken/hellenddak 2.webp" alt="Stalen deur voorbeeld 5">
+  </div>
+</section>
+
+</body>
+</html>
+<!-- Lightbox (verbergen tot er op een foto geklikt wordt) -->
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="Grote versie">
+</div>
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  document.querySelectorAll('.gallery-container img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+</script>
+</body>
+</html>

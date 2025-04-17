@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stalen Deuren en Ramen - Tilkens Construct</title>
+  <link rel="stylesheet" href="poorten.css" />
+  <script src="home.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>Tilkens Construct</h1>
+    </div>
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="magikal.html">Onze kachels</a></li>
+        <li><a href="poorten.html">Poorten</a></li>
+        <li><a href="overons.html">Over ons</a></li>
+        <li><a href="offerte.html">Offerte aanvragen</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>Stalen ramen, deuren en poorten op maat</h2>
+    <p class="subtitle">In samenwerking met <strong>Metinoxx</strong></p>
+
+    <div class="content">
+      <div class="text">
+        <h3>Waarom kiezen voor een stalen binnendeur?</h3>
+        <ul>
+          <li><strong>Uitzonderlijk sterk en veilig:</strong> staal gaat een leven lang mee en is bestand tegen harde slagen en brand.</li>
+          <li><strong>Goede isolatie:</strong> stalen deuren houden warmte binnen en geluid buiten. Dat bespaart op energiekosten.</li>
+          <li><strong>Dunne profielen:</strong> modern, strak design met maximale lichtinval.</li>
+          <li><strong>Duurzaam en onderhoudsvriendelijk:</strong> weinig onderhoud nodig, lange levensduur.</li>
+          <li><strong>Volledig op maat:</strong> verkrijgbaar in alle mogelijke maten en kleuren.</li>
+        </ul>
+        <p><strong>Isolerende werking en geluiddempend:</strong> Een stalen deur houdt warmte vast en dempt geluiden, waardoor je geniet van extra comfort én energiebesparing. Staal is bovendien milieuvriendelijk door zijn lange levensduur.</p>
+      </div>
+
+      <div class="image">
+        <img src="img/binnendeur.webp" alt="Stalen deur op maat" />
+      </div>
+    </div>
+  </section>
+<!-- ... alles hierboven blijft hetzelfde -->
+
+</section>
+
+<!-- Fotogalerij -->
+<section class="gallery">
+  <h3>Voorbeelden van onze realisaties</h3>
+  <div class="gallery-container">
+    <img src="img/poorten/WhatsApp Image 2025-04-16 at 17.52.26 (1).jpeg" alt="Stalen deur voorbeeld 1">
+    <img src="img/poorten/WhatsApp Image 2025-04-16 at 17.52.26 (2).jpeg" alt="Stalen deur voorbeeld 2">
+    <img src="img/poorten/WhatsApp Image 2025-04-16 at 17.52.26.jpeg" alt="Stalen deur voorbeeld 3">
+    <img src="img/poorten/WhatsApp Image 2025-04-16 at 17.52.27.jpeg" alt="Stalen deur voorbeeld 4">
+    <img src="img/poorten/WhatsApp Image 2025-04-16 at 18.18.47.jpeg" alt="Stalen deur voorbeeld 5">
+  </div>
+</section>
+
+</body>
+</html>
+<!-- Lightbox (verbergen tot er op een foto geklikt wordt) -->
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="Grote versie">
+</div>
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  document.querySelectorAll('.gallery-container img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+</script>
+</body>
+</html>

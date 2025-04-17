@@ -1,0 +1,226 @@
+/* Algemene reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body en algemene styling */
+html, body {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* voorkomt horizontaal scrollen door overbodige marges */
+}
+
+/* Header styling */
+header {
+    background: #1e1e1e;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+main section {
+    margin: 60px 0;
+    padding: 40px 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+
+/* Navigatie */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Zorg dat de content niet achter de header zit */
+main {
+    padding-top: 80px; /* Zorg ervoor dat de hoofdinhoud niet achter de header komt */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    /* Zorg ervoor dat de main-sectie ten minste de resterende hoogte van het scherm krijgt */
+    flex-grow: 1;
+}
+
+/* Contactsectie */
+.contact-info {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Contactdetails */
+.contact-details p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-details a {
+    color: #1e1e1e;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #ffd700;
+}
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* terug naar 100% van het scherm */
+    background-image: url('img/poorten/WhatsApp Image 2025-04-16 at 17.52.27.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+  
+  .hero-banner::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* optioneel: donkere overlay */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 90%;
+    width: 800px;
+    padding: 0 20px;
+    text-align: center;
+}
+  
+  .hero-content h1,
+  .hero-content p {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease-out forwards;
+    color: white;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation-delay: 0.3s;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Parallax scroll effect */
+  .hero-banner {
+    background-attachment: fixed;
+  }
+
+/* Footer */
+footer {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #444;
+    width: 100%;
+    /* Zet de footer onderaan als de inhoud van de pagina korter is */
+    position: relative;
+    bottom: 0;
+    margin-top: auto; /* Zorg ervoor dat de footer naar beneden wordt geduwd */
+}
+
+ /* Responsive: Hamburger menu zichtbaar bij kleine schermen */
+ @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    nav ul li a {
+      font-size: 1.2em;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+    .hero-banner {
+        height: 80vh;
+        background-size: cover;
+      }
+  }

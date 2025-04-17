@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .section h2 {
+    color: #1a1a1a;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  header {
+    background: #1e1e1e;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  header .logo img {
+    height: 50px;
+  }
+  .menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;
+  }
+  .text {
+    flex: 1 1 400px;
+  }
+  
+  .text h3 {
+    color: #1f3b4d;
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  
+  .text ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .text ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .image {
+    flex: 1 1 300px;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .gallery h3 {
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .gallery-container img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-container img:hover {
+    transform: scale(1.05);
+  }
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+    cursor: zoom-out;
+  }
+  .dakwerken {
+    text-align: center;
+  }
+  
+  .dakwerken h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+  }
+  
+  .dakwerken p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .dakwerken-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 40px;
+  }
+  
+  .dakwerken-fotos .foto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  }
+
+   /* Responsive: Hamburger menu zichtbaar bij kleine schermen */
+   @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    nav ul li a {
+      font-size: 1.2em;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+    .dakwerken-fotos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .dakwerken-fotos {
+      grid-template-columns: 1fr;
+    }
+    .dakwerken p {
+      font-size: 1.1em;
+    }
+  }
+  
+  
